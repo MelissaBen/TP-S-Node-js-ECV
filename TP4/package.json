@@ -1,0 +1,26 @@
+{
+  "name": "expresstp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelissaBen/TP-S-Node-js-ECV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/MelissaBen/TP-S-Node-js-ECV/issues"
+  },
+  "homepage": "https://github.com/MelissaBen/TP-S-Node-js-ECV#readme"
+}
