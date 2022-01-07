@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+
 // Exercice 1
 const isStringMoreThan20 = (string) => {
   return new Promise((resolve, reject) => {
@@ -74,5 +75,51 @@ async function execute(){
 }
 
 execute();
+
+// Exercice 6 
+
+async function axiosExecute(){
+
+  const apiUrl = "https://swapi.py4e.com/api/";
+
+  try {
+    const response = await axios.get(`${ apiUrl }/starships/10`);
+    console.log("starship id 10", response.data);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const response = await axios.get(`${ apiUrl }/planets`);
+    console.log("planets", response.data.count);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const response = await axios.get(`${ apiUrl }/people?search=Darth  Vader`);
+    console.log("people Darth Vader", response.data.results[0].birth_year);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const response = await axios.get(`${ apiUrl }/people/13?format=wookiee`);
+    console.log("Peooplewookiee", response.data);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const response = await axios.get(`${ apiUrl }/people?search=r2-d2`);
+    const responseHomeworld = await axios.get(response.data.results[0].homeworld);
+    console.log("R2-D2 Homeworld", responseHomeworld);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+axiosExecute();
+
 
 
